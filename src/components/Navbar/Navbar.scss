@@ -72,5 +72,11 @@
       }
     }
 
+    // Add hover to <li>
+    &:hover {
+      div {
+        background: var(--secondary-color);
+      }
+    }
   }
 }
