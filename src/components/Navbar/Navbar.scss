@@ -6,5 +6,71 @@
 
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25);
+
+  // This backdrop will blur behind the fixed navbar
   backdrop-filter: blur(4px);
+  // because backdrop-filter is not available on all browsers
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  //target the img inside of the .app__navbar-logo
+  img {
+    width: 100px;
+    height: 25px;
+
+    // Add media query for larger devices
+    @media screen and (min-width: 2000px) {
+      width: 200px;
+      height: 50px;
+    }
+  }
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+    
+    flex-direction: column;
+
+    // <div> and <a hre> tags under image logo in Navbar.jsx
+    div {
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border-radius: 50%;
+
+      margin-bottom: 5px;
+    }
+    a {
+      color: var(--gray-color);
+      text-decoration: none;
+      flex-direction: column;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      // When hovering over the links, they slowly change colors
+      transition: all 0.3s ease-in-out;
+
+      // No need to write a new class just add the & sign which knows we are talking about inside this <a href> class
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+  }
 }
