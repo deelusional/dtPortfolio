@@ -77,7 +77,7 @@
     p {
       width: 100%;
       text-transform: uppercase;
-      text-align: right;
+      text-align: left;
     }
   }
 
@@ -118,7 +118,7 @@
     }
   }
 
-  // circles with different height & width
+  // skill circles with different height & width
 
   div:nth-child(1) {
     width: 100px;
@@ -132,8 +132,8 @@
   }
 
   div:nth-child(3) {
-    width: 70px;
-    height: 70px;
+    width: 85px;
+    height: 85px;
   }
 
   @media screen and (min-width: 2000px) {
@@ -175,7 +175,7 @@
   position: relative;
 
   img {
-    width: 100%;
+    width: 90%;
     object-fit: contain;
     z-index: 1;
   }
