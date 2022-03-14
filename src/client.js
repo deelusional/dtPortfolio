@@ -9,3 +9,10 @@ export const client = sanityClient({
   useCdn: true,
   token: process.env.REACT_APP_SANITY_TOKEN,
 });
+
+// This will be for images
+const builder = imageUrlBuilder(client);
+
+export const urlFor = (source) => builder.image(source);
+
+
