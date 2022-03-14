@@ -1,18 +1,18 @@
 .app__navbar {
   width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25);
-
-  // This backdrop will blur behind the fixed navbar
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur(4px);
-  // because backdrop-filter is not available on all browsers
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
+  z-index: 2;
 }
 
 .app__navbar-logo {
@@ -20,15 +20,13 @@
   justify-content: flex-start;
   align-items: center;
 
-  //target the img inside of the .app__navbar-logo
   img {
-    width: 100px;
-    height: 25px;
+    width: 90px;
+    height: 20px;
 
-    // Add media query for larger devices
     @media screen and (min-width: 2000px) {
-      width: 200px;
-      height: 50px;
+      width: 180px;
+      height: 40px;
     }
   }
 }
@@ -44,10 +42,9 @@
   li {
     margin: 0 1rem;
     cursor: pointer;
-    
+
     flex-direction: column;
 
-    // <div> and <a hre> tags under image logo in Navbar.jsx
     div {
       width: 5px;
       height: 5px;
@@ -56,23 +53,22 @@
 
       margin-bottom: 5px;
     }
+
     a {
       color: var(--gray-color);
       text-decoration: none;
       flex-direction: column;
+
       text-transform: uppercase;
       font-weight: 500;
 
-      // When hovering over the links, they slowly change colors
       transition: all 0.3s ease-in-out;
 
-      // No need to write a new class just add the & sign which knows we are talking about inside this <a href> class
       &:hover {
         color: var(--secondary-color);
       }
     }
 
-    // Add hover to <li>
     &:hover {
       div {
         background: var(--secondary-color);
@@ -80,7 +76,7 @@
     }
   }
 
-  @media  (max-width: 900px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 }
@@ -94,7 +90,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--secondary-color);
+  background-color: var(--secondary-color);
+
 
   svg {
     width: 70%;
@@ -128,8 +125,8 @@
     box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
 
     svg {
-      width: 35%;
-      height: 35%;
+      width: 40px;
+      height: 40px;
       color: var(--secondary-color);
       margin: 0.5rem 1rem;
     }
@@ -138,8 +135,8 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      width: 100%;
       height: 100%;
+      width: 100%;
 
       display: flex;
       justify-content: flex-start;
@@ -155,8 +152,22 @@
           font-size: 1rem;
           text-transform: uppercase;
           font-weight: 500;
+
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--secondary-color);
+          }
         }
       }
     }
+
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: none;
   }
 }
