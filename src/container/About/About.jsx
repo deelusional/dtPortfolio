@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants';
 
-import './About.scss';
+
+import './About';
 
 const abouts = [
-  { title: 'Shopify Full Service Support and Creation', description: '-Build custom Shopify store designs and development from the ground up', imgUrl: images.about01 },
-  { title: 'Shopify Theme Customization', description: 'Grow your business and connect with billions of users by showing your unique business look', imgUrl: images.about02 },
-  { title: 'Store Migration', description: 'Moving from another platform? No worries! Migrate all products, customers, orders, and blogs, securely and accurately while preserving your SEO', imgUrl: images.about03},
-  { title: 'Web Development', description: 'Landing pages | Full site creation', imgUrl: images.about04},
+  {title: 'Shopify Solutions Expert', description: 'Shopify theme development, store setup, and configuration', imgUrl: '', },
+  {title: 'Frontend Developer', description: 'Websites, landing pages, and applications', imgUrl: '', },
+  {title: 'Content Writing', description: 'Creating and writing content that keeps customers interested!', imgUrl: '', },
+  {title: 'Educator', description: 'English instruction', imgUrl: '', },
 ];
 
 const About = () => {
   return (
     <>
-      <h2 className='head-text'> I know that <span>Great Communication</span> <br /> means <span>Business Solutions!</span></h2>
+      <h2 className='head-text'>I Know That <span>Great Communication</span><br />means<span> Great Business!</span></h2>
 
       <div className='app__profiles'>
         {abouts.map((about, index) => (
@@ -23,18 +23,17 @@ const About = () => {
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: 'tween' }}
-            className='app__profile-item'
+            className="app__profile-item"
             key={about.title + index}
           >
             <img src={about.imgUrl} alt={about.title} />
             <h2 className='bold-text' style={{ marginTop: 20 }}>{about.title}</h2>
-            <p className='p-text' style={{ marginTop: 10 }}>{about.description}</p>
+            <h2 className='p-text' style={{ marginTop: 10 }}>{about.description}</h2>
           </motion.div>
-        ))}
+        ))};
       </div>
-
     </>
   )
 }
 
-export default About
+export default About;
