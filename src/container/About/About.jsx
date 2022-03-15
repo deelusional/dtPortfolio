@@ -4,18 +4,22 @@ import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
 import './About.scss';
-
-const abouts = [
-  { title: 'Shopify Solutions Expert', description: 'Shopify theme development, store setup, and configuration', imgUrl: images.about01 },
-  { title: 'Frontend Developer', description: 'Websites, landing pages, and applications', imgUrl: images.about02 },
-  { title: 'Content Writing', description: 'Creating and writing content that keeps customers interested!', imgUrl: images.about03 },
-  { title: 'Educator', description: 'English instruction', imgUrl: images.about04 }
-];
+import { urlFor, client } from '../../client';
 
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+
+    client.fetch(query).then((data) => {
+      setAbouts(data);
+    });
+  }, []);
+
   return (
     <>
-      <h2 className="head-text"><span>Great Communication</span> <br />means  <span>Successful Business!</span></h2>
+      <h2 className="head-text">I Understand That <span>Great Communication </span> <br />means  <span>Business Solutions!</span></h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
@@ -26,7 +30,7 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={(about.imgUrl)} alt={about.title} />
+            <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
             <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
           </motion.div>
