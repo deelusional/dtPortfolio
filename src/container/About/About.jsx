@@ -2,22 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 
-
-import './About';
+import { images } from '../../constants';
+import './About.scss';
 
 const abouts = [
-  {title: 'Shopify Solutions Expert', description: 'Shopify theme development, store setup, and configuration', imgUrl: '', },
-  {title: 'Frontend Developer', description: 'Websites, landing pages, and applications', imgUrl: '', },
-  {title: 'Content Writing', description: 'Creating and writing content that keeps customers interested!', imgUrl: '', },
-  {title: 'Educator', description: 'English instruction', imgUrl: '', },
+  { title: 'Shopify Solutions Expert', description: 'Shopify theme development, store setup, and configuration', imgUrl: images.about01 },
+  { title: 'Frontend Developer', description: 'Websites, landing pages, and applications', imgUrl: images.about02 },
+  { title: 'Content Writing', description: 'Creating and writing content that keeps customers interested!', imgUrl: images.about03 },
+  { title: 'Educator', description: 'English instruction', imgUrl: images.about04 }
 ];
 
 const About = () => {
   return (
     <>
-      <h2 className='head-text'>I Know That <span>Great Communication</span><br />means<span> Great Business!</span></h2>
+      <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
 
-      <div className='app__profiles'>
+      <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
@@ -26,14 +26,14 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={about.imgUrl} alt={about.title} />
-            <h2 className='bold-text' style={{ marginTop: 20 }}>{about.title}</h2>
-            <h2 className='p-text' style={{ marginTop: 10 }}>{about.description}</h2>
+            <img src={(about.imgUrl)} alt={about.title} />
+            <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
+            <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
           </motion.div>
-        ))};
+        ))}
       </div>
     </>
-  )
-}
+  );
+};
 
 export default About;
