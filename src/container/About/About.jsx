@@ -11,6 +11,7 @@ const About = () => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
+    // "abouts" must be double quotes
     const query = '*[_type == "abouts"]';
 
     client.fetch(query).then((data) => {
@@ -20,7 +21,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text">I Understand That <span>Great Communication </span> <br />means  <span>Business Solutions!</span></h2>
+      <h2 className="head-text">I Understand That <span>Great Communication</span><br /> And <span>Technical Skills</span> means<span> Business Solutions!</span></h2>
 
       <div className="app__profiles">
         {abouts.map((about, index) => (
