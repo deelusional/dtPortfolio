@@ -13,6 +13,7 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
+    // "works" must be in double quotes
     const query = '*[_type == "works"]';
 
     client.fetch(query).then((data) => {
