@@ -22,7 +22,7 @@ const About = () => {
   return (
     <>
       <h2 className="head-text"><span>Great Communication</span> And<br /><span> Tech Skills</span> Become<span> Business Solutions!</span></h2>
-        <p className='p-text'>I am a Shopify Expert that provides solutions to your business needs. My Shopify knowledge combined with frontend tech skills allows me to take your existing or new ideas and convert them into fully functional and beautiful Shopify stores.
+        <p className='p-text'>I am a Shopify Expert that provides solutions to your business needs. My Shopify knowledge combined with frontend tech skills allows me to take your designs or ideas and convert them into fully functional Shopify stores. Clear communication is the key to success.
         </p>
       <div className="app__profiles">
         {abouts.map((about, index) => (
