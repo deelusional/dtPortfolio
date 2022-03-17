@@ -30,16 +30,20 @@ const Header = () => {
           <div className='badge-cmp app__flex'>
             {/* <span>👋</span> */}
             <div style={{ marginLeft: 20 }}>
-              <h1 className='head-text'>dTap</h1>
-              <p className='p-text'>Shopify Solutions Expert</p>              
+              <h1 className='head-text'>HI! I'M DTAP</h1>
+              <p className='p-text'>Shopify Solutions Expert</p>
+              <p className='p-text'>Front End Developer</p>
             </div>
           </div>
 
           <div className='tag-cmp app__flex'>
              <p className='p-text'>Shopify Store Setup</p>
              <p className='p-text'>Theme Development</p>
-             <p className='p-text'>Configuration</p>
+             <p className='p-text'>Design && Customization</p>
+             <p className='p-text'>Store Migration</p>
           </div>
+
+    
         </div>
       </motion.div>
 
