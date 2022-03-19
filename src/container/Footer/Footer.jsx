@@ -37,7 +37,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Please Feel Free To Contact Me And Inquire!</h2>
+      <h2 className="head-text">Let's Work <span>Together</span>!</h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
@@ -75,6 +75,10 @@ const Footer = () => {
           </h3>
         </div>
       )}
+      <div className="copyright">
+          <p className="p-text">@2020 dtap development</p>
+          <p className="p-text">All Rights Reserved</p>
+        </div>
     </>
   );
 };

@@ -21,9 +21,15 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text"><span>Great Communication</span> And<br /><span> Tech Skills</span> Become<span> Business Solutions!</span></h2>
-        <p className='p-text'>I am a Shopify Expert that provides solutions to your business needs. My Shopify knowledge combined with frontend tech skills allows me to take your designs or ideas and convert them into fully functional Shopify stores. Clear communication is the key to success.
-        </p>
+      <h2 className="head-text">I Believe <span>Great Communication</span> And<br /><span> Technical Skills</span> Result In<span> Business Solutions!</span></h2>
+      <p className='p-text'>
+        Having an education and experience in both the Information Technology and Education fields, I bring solid technical solutions to businesses with effective communication and detailed results. It is well known that showcasing development and design skills are important, but when soft skills are combined, solutions to business problems becomes obtainable quicker.  
+      </p>
+      <br />
+      <p className='p-text'>
+        That's where I come in! I provide business solustions that are geared toward your eCommerce needs through Shopify and Frontend Development. Freelancing and working remote gives me the comfort to focus directly on you as the client personally. You are not just a number! I treat your business as if it were my own because at the end of the day, if you don't succeed, neither do I. This is a win-win!
+      </p>
+
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
