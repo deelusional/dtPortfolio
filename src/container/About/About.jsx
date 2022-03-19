@@ -23,11 +23,11 @@ const About = () => {
     <>
       <h2 className="head-text">I Believe <span>Great Communication</span> And<br /><span> Technical Skills</span> Result In<span> Business Solutions!</span></h2>
       <p className='p-text'>
-        Having an education and experience in both the Information Technology and Education fields, I bring solid technical solutions to businesses with effective communication and detailed results. It is well known that showcasing development and design skills are important, but when soft skills are combined, solutions to business problems becomes obtainable quicker.  
+        I deliver solid technical solutions to organizations with efficient communication and thorough outcomes, thanks to my education and expertise in both the Information Technology and Education industries. It is commonly recognized that demonstrating development and design talents is crucial, but when soft skills are integrated, business challenges can be solved faster.
       </p>
       <br />
       <p className='p-text'>
-        That's where I come in! I provide business solustions that are geared toward your eCommerce needs through Shopify and Frontend Development. Freelancing and working remote gives me the comfort to focus directly on you as the client personally. You are not just a number! I treat your business as if it were my own because at the end of the day, if you don't succeed, neither do I. This is a win-win!
+        That's where I enter the picture! Through Shopify and Frontend Development, I deliver business solutions tailored to your eCommerce needs. Working as a freelancer remotely allows me to focus solely on you, the client. You're more than a number! I treat your company as if it were mine because, at the end of the day, if your business does not succeed, neither do I. This is a win-win situation!
       </p>
 
       <div className="app__profiles">
