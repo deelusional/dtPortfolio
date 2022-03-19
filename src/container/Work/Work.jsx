@@ -13,7 +13,6 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    // "works" must be in double quotes
     const query = '*[_type == "works"]';
 
     client.fetch(query).then((data) => {
@@ -39,8 +38,7 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">My <span>Creative Portfolio</span> Section</h2>
-  
+      <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">
         {['Shopify', 'Front End', 'Content', 'All'].map((item, index) => (
