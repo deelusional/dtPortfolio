@@ -27,7 +27,7 @@ const About = () => {
       </p>
       <br />
       <p className='p-text'>
-        That's where I enter the picture! Through Shopify and Frontend Development, I deliver business solutions tailored to your eCommerce needs. Working as a freelancer remotely allows me to focus solely on you, the client. You're more than a number! I treat your company as if it were mine because, at the end of the day, if your business does not succeed, neither do I. This is a win-win situation!
+        That's where I come into the picture! I provide business solutions targeted to your eCommerce needs using Shopify and Frontend Development. Working remotely as a freelancer allows me to concentrate exclusively on you, the customer. You aren't just a number! I approach your business as if it were mine because, at the end of the day, if your firm fails, neither will I. This is a win-win situation for everyone!
       </p>
 
       <div className="app__profiles">
